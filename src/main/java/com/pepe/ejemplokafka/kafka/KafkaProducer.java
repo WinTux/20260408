@@ -14,6 +14,7 @@ public class KafkaProducer {
 		this.kafkaTemplate = kafkaTemplate;
 	}
 	public void enviarMensaje(String mensaje) {
-		
+		logger.info(String.format("Mensaje enviado: %s", mensaje));
+		kafkaTemplate.send("pruebita", mensaje);
 	}
 }
