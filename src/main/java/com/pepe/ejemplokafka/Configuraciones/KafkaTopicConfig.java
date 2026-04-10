@@ -13,4 +13,10 @@ public class KafkaTopicConfig {
 				//.partitions(5)
 				.build();
 	}
+	@Bean
+	public NewTopic miSegundoTopic() {
+		return TopicBuilder.name("pruebitaJson")
+				//.partitions(5)
+				.build();
+	}
 }
